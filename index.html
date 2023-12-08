@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>DZ04_z01-11</title>
+</head>
+<body>
+  <hr>
+  <h2>Zadatak broj 1.</h2>
+ <script type="text/javascript">
+  var broj = 19;
+  var niz1 = 'Niz znakova';
+  var niz2 = '3.14';
+  var niz3 = 'U dva</br>retka';
+  var logicka = true;
+
+  document.write("Broj: " + broj + "<br>");
+  document.write("Niz1: " + niz1 + "<br>");
+  document.write("Niz2: " + niz2 + "<br>");
+  document.write("Niz3: " + niz3 + "<br>");
+  document.write("Logicka: " + logicka + "<br>");
+
+  logicka = false;
+
+  document.write("Promjenjena vrijednost: " + logicka + "<br>");
+ </script>
+ <hr>
+ <h2>Zadatak broj 2.</h2>
+ <script type ="text/javascript">
+
+  var kvadrat;
+  var i;
+
+  for (i = 1; i <= 100; i++) {
+    if(i % 2 == 0) {
+      kvadrat = i * i;
+      document.write("Paran broj i njegov kvadrat: " + i + "= " + kvadrat + "<br>");
+    }
+  }
+ </script>
+ <hr>
+ <h2>Zadatak broj 3</h2>
+ <script type="text/javascript">
+  var i;
+  for (i = 1; i <= 1000; i++) {
+    if ((i == 2) || (i % 2 != 0 && prosti(i))) {
+      document.write("Prost broj: " + i + "<br>");
+  }
+}
+
+function prosti(broj) {
+  var j;
+  if (broj < 2) return false;
+  for (j = 2; j <= Math.sqrt(broj); j++) {
+    if (broj % j == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+ </script>
+<hr>
+<h2>Zadatak broj 4.</h2>
+<script type="text/javascript">
+
+var polje = [1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 12, 4, 85];
+document.write("Inicijalna dužina polja: " + polje.length + "<br>");
+
+polje.sort(function(a, b)  {
+  return b - a;
+});
+document.write("Sortiranje od najvećeg do najmanjeg: " + polje + "<br>");
+
+polje.sort(function(a, b)  {
+  return a - b;
+});
+document.write("Sortiranje od najmanjeg do najvećeg: " + polje + "<br>");
+
+var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+var polje_final = polje.concat(polje2);
+document.write(polje_final);
+</script>
+<hr>
+<h2>Zadatak broj 5.</h2>
+<script type="text/javascript">
+  var  objekt1 = { firstName: "Marko", lastName: "Maric", age: 40, eyeColor: "crna" };
+  var  objekt2 = { firstName: "Ante", lastName: "Kotromanic", age: 21, eyeColor: "plava" };
+  var  objekt3 = { firstName: "Ivana", lastName: "Milanovic", age: 62, eyeColor: "smeđa" };
+  var objekti = [objekt1, objekt2, objekt3];
+
+  for (var i = 0; i < objekti.length; i++) {
+    document.write("Osoba " + (i + 1) + "<br>");
+    document.write(" Ime: " + objekti[i].firstName + "<br>");
+    document.write(" Prezime: " + objekti[i].lastName + "<br>");
+    document.write(" Godina: " + objekti[i].age + "<br>");
+    document.write(" Boja očiju: " + objekti[i].eyeColor + "<br>");
+    document.write("<br>");
+  }
+</script>
+<hr>
+<h2>Zadatak broj 6.</h2>
+<script type="text/javascript">
+var pas = {
+  ime: "Reks",
+  godine: 2,
+  zvuk: function() {
+    return "AV AV!";
+  }
+};
+document.write("Ime psa: " + pas.ime + "<br>");
+document.write("Godine psa: " + pas.godine + "<br>");
+document.write("Zvuk psa: " + pas.zvuk() + "<br>");
+</script>
+<hr>
+<h2>Zadatak broj 7.</h2>
+<script type="text/javascript">
+var kvadratFunkcija = function(x) {
+  if (typeof x === 'number') {
+    return x * x; 
+  } else {
+    return "Obavijest o pogrešci!";
+  }
+};
+document.write("-Ako je proslijeđen neki broj(a ne znak) npr. 10 = " + kvadratFunkcija(10));
+document.write("<br>");
+document.write("-Ako je proslijeđen neki znak(a ne broj), a da nije broj => " + kvadratFunkcija("y"));
+</script>
+<hr>
+</body>
+</html>
